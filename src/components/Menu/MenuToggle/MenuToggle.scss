@@ -14,6 +14,7 @@
     top: 50%;
     left: 2em;
     transform: translateY(-50%);
+    z-index: 200;
 
     .menu-text {
         font-size: 1.2em;
@@ -39,10 +40,22 @@
         }
     }
 
-    &.menu-toggle-active {
+    &:hover {
+        color: var(--bg-primary);
+        background: var(--text-primary);
+
+        .menu-burger-bar {
+            background: var(--bg-primary);
+        }
+    }
+}
+
+.menu-active {
+
+    .menu-toggle {
 
         .menu-burger-bar:nth-child(1) {
-            transform: rotateZ(-45deg) translateY(-0.05em);
+            transform: rotateZ(-45deg) translateY(0.05em);
             width: 1.5em;
         }
 
@@ -51,7 +64,7 @@
         }
 
         .menu-burger-bar:nth-child(3) {
-            transform: rotateZ(45deg) translateY(0.05em);
+            transform: rotateZ(45deg) translateY(-0.05em);
             width: 1.5em;
         }
     }

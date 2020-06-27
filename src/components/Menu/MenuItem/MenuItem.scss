@@ -12,6 +12,14 @@
     padding: 0.3em;
     font-weight: bold;
     transition: all 0.5s;
+
+    position: fixed;
+    top: 50%;
+    left: 2em;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
     
     &:hover {
         color: var(--bg-primary);
@@ -20,5 +28,12 @@
 
     i {
         font-size: 2em;
+    }
+}
+
+.menu-active {
+    .menu-item {
+        visibility: visible;
+        opacity: 1;
     }
 }

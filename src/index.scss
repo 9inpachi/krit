@@ -3,22 +3,30 @@
 
 // Variables for light theme
 :root {
-    --bg-primary: #ffffff;
+    --bg-primary: #f3f3f3;
     --text-primary: #000000;
     --text-secondary: #e0e0e0;
 }
 
 // Variables for dark theme
 .dark-mode {
-    --bg-primary: #000000;
+    --bg-primary: #2f2f2f;
     --text-primary: #ffffff;
     --text-secondary: #e0e0e0;
 }
 
 body {
+    padding: 0;
+    margin: 0;
     background: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Varela Round', sans-serif;
     // Transition for dark mode
     transition: all 0.2s;
+}
+
+.body-wrapper {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
 }
