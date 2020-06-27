@@ -1,0 +1,24 @@
+// Importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+// Variables for light theme
+:root {
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #e0e0e0;
+}
+
+// Variables for dark theme
+.dark-mode {
+    --bg-primary: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Varela Round', sans-serif;
+    // Transition for dark mode
+    transition: all 0.2s;
+}
