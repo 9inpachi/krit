@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuToggle from './MenuToggle/MenuToggle';
 import MenuItem from './MenuItem/MenuItem';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
 import './Menu.scss';
 
 class Menu extends React.Component {
@@ -9,7 +10,7 @@ class Menu extends React.Component {
 
     menuItems = [
         {
-            icon: 'fa fa-adjust',
+            icon: <NightsStayIcon classes={{ root: 'menu-item-icon' }} />,
             tooltip: 'Toggle dark theme',
             action: () => {
                 document.body.classList.toggle('dark-mode');
@@ -34,9 +35,6 @@ class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = { menuActive: false };
-    }
-
-    componentWillMount() {
         // More of a workaround
         this.menuItems = this.menuItems.map((menuItem) => {
             menuItem.key = 'menu-item-' + Math.round(Math.random() * 10000);

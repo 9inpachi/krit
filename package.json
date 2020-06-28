@@ -1,17 +1,16 @@
 {
   "name": "fawadali.com",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.10.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "font-awesome": "^4.7.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+  "description": "Personal website",
+  "keywords": [
+    "website",
+    "personal",
+    "web developer"
+  ],
+  "author": {
+    "name": "Fawad Ali",
+    "email": "m.fawaadali98@gmail.com",
+    "url": "https://github.com/9inpachi"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +20,17 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
   },
   "browserslist": {
     "production": [

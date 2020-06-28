@@ -1,0 +1,17 @@
+.circle-button {
+    border: 0.2em solid var(--text-primary);
+    color: var(--text-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    margin-right: 1em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+
+    &:hover {
+        color: var(--bg-primary);
+        background: var(--text-primary);
+    }
+}

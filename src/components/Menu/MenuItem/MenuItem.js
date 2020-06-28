@@ -1,6 +1,5 @@
 import React from 'react';
 import { Tooltip } from '@material-ui/core';
-import 'font-awesome/css/font-awesome.min.css';
 import './MenuItem.scss';
 
 class MenuItem extends React.Component {
@@ -17,7 +16,7 @@ class MenuItem extends React.Component {
                             .replace(/&angle1;/g, this.props.rotationAngle)
                             .replace(/&angle2;/g, -this.props.rotationAngle)
                     }}>
-                    <i className={this.props.icon}></i>
+                    {this.props.icon}
                 </div>
             </Tooltip>
         );
