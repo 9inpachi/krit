@@ -11,6 +11,10 @@
     padding: 0.5em;
     transition: all 0.5s;
 
+    &:last-child {
+        margin-right: 0;
+    }
+
     &:hover {
         color: var(--bg-primary);
         background: var(--text-primary);
