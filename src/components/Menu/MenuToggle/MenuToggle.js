@@ -1,10 +1,12 @@
 import React from 'react';
+import CircleButton from '../../CircleButton/CircleButton';
 import './MenuToggle.scss';
 
 class MenuToggle extends React.Component {
     render() {
         return (
-            <div onClick={this.props.toggleMenu}
+            <CircleButton onClick={this.props.toggleMenu}
+                size={4}
                 className="menu-toggle">
                 <span className="menu-text">{this.props.children}</span>
                 <div className="menu-burger">
@@ -12,7 +14,7 @@ class MenuToggle extends React.Component {
                     <span className="menu-burger-bar"></span>
                     <span className="menu-burger-bar"></span>
                 </div>
-            </div>
+            </CircleButton>
         );
     }
 }

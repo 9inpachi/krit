@@ -2,6 +2,8 @@ import React from 'react';
 import Menu from './components/Menu/Menu';
 import TopSection from './sections/TopSection/TopSection';
 import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
+import AboutSection from './sections/AboutSection/AboutSection';
+import Footer from './sections/Footer/Footer';
 
 class App extends React.Component {
 
@@ -24,6 +26,8 @@ class App extends React.Component {
                 <Menu />
                 <TopSection />
                 <ProjectsSection />
+                <AboutSection />
+                <Footer />
             </div>
         );
     }

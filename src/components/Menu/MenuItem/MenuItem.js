@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip } from '@material-ui/core';
+import CircleButton from '../../CircleButton/CircleButton';
 import './MenuItem.scss';
 
 class MenuItem extends React.Component {
@@ -8,17 +8,18 @@ class MenuItem extends React.Component {
 
     render() {
         return (
-            <Tooltip title={this.props.tooltip} placement="right">
-                <div className="menu-item"
-                    onClick={this.props.action}
-                    style={!this.props.menuActive ? {} : {
-                        transform: this.activeTransformStyle
-                            .replace(/&angle1;/g, this.props.rotationAngle)
-                            .replace(/&angle2;/g, -this.props.rotationAngle)
-                    }}>
-                    {this.props.icon}
-                </div>
-            </Tooltip>
+            <CircleButton className="menu-item"
+                tooltip={this.props.tooltip}
+                onClick={this.props.action}
+                tooltipPlacement={this.props.tooltipPlacement}
+                size={3}
+                style={!this.props.menuActive ? {} : {
+                    transform: this.activeTransformStyle
+                        .replace(/&angle1;/g, this.props.rotationAngle)
+                        .replace(/&angle2;/g, -this.props.rotationAngle)
+                }}>
+                {this.props.icon}
+            </CircleButton>
         );
     }
 }

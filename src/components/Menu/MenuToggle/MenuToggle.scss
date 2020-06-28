@@ -1,15 +1,4 @@
 .menu-toggle {
-    width: 4em;
-    height: 4em;
-    border: 0.2em solid var(--text-primary);
-    color: var(--text-primary);
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5em;
-
     position: fixed;
     top: 50%;
     left: 2em;
@@ -41,8 +30,6 @@
     }
 
     &:hover {
-        color: var(--bg-primary);
-        background: var(--text-primary);
 
         .menu-burger-bar {
             background: var(--bg-primary);

@@ -31,3 +31,12 @@ body {
     max-width: 90%;
     margin: 0 auto;
 }
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

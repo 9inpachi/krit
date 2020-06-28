@@ -6,8 +6,8 @@ class TopSection extends React.Component {
         return (
             <div className="top-section">
                 <div className="intro">
-                    <h1>Fawad<br />Ali</h1>
-                    <p>Software Developer</p>
+                    <h1>fawad<br />ali</h1>
+                    <p>software engineer</p>
                 </div>
                 <div className="signature">
                     <svg viewBox="0 0 100 100">

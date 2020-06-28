@@ -2,6 +2,8 @@ import React from 'react';
 import MenuToggle from './MenuToggle/MenuToggle';
 import MenuItem from './MenuItem/MenuItem';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import ComputerIcon from '@material-ui/icons/Computer';
 import './Menu.scss';
 
 class Menu extends React.Component {
@@ -22,8 +24,15 @@ class Menu extends React.Component {
             }
         },
         {
-            icon: 'fa fa-github',
+            icon: <GitHubIcon classes={{ root: 'menu-item-icon' }} />,
             tooltip: 'My GitHub',
+            action: () => {
+                window.open('https://github.com/9inpachi')
+            }
+        },
+        {
+            icon: <ComputerIcon classes={{ root: 'menu-item-icon' }} />,
+            tooltip: 'Projects',
             action: () => {
                 window.open('https://github.com/9inpachi')
             }
@@ -65,7 +74,7 @@ class Menu extends React.Component {
                     angle += index * increment;
                     return (
                         <MenuItem key={menuItem.key} icon={menuItem.icon}
-                            tooltip={menuItem.tooltip}
+                            tooltip={menuItem.tooltip} tooltipPlacement="right"
                             action={menuItem.action}
                             menuActive={this.state.menuActive}
                             rotationAngle={angle} />

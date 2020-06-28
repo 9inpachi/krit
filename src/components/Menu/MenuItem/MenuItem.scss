@@ -1,18 +1,4 @@
 .menu-item {
-    display: flex;
-    width: 3em;
-    height: 3em;
-    border: 0.2em solid var(--text-primary);
-    color: var(--text-primary);
-    border-radius: 50%;
-    cursor: pointer;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.3em;
-    font-weight: bold;
-    transition: all 0.5s;
-
     position: fixed;
     top: 50%;
     left: 2em;
@@ -20,11 +6,6 @@
     visibility: hidden;
     opacity: 0;
     z-index: 100;
-    
-    &:hover {
-        color: var(--bg-primary);
-        background: var(--text-primary);
-    }
 
     .menu-item-icon {
         font-size: 2em;
