@@ -1,4 +1,9 @@
 import React from 'react';
+import CircleButton from '../../components/CircleButton/CircleButton';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import { ReactComponent as GitHubIcon } from '../../assets/icons/github.svg';
+import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg';
+import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedin.svg';
 import './TopSection.scss';
 
 class TopSection extends React.Component {
@@ -29,6 +34,20 @@ class TopSection extends React.Component {
                             c1.4,0.1,2.8-0.1,4.2-0.3c-5.2,1.9-10.4,3.7-15.5,5.7c-8.3,3.1-16.6,6.3-24.6,9.9c-4.3,1.9-8.4,4.1-12.5,6.3
                             c12.1-4.7,24.1-9.4,36.3-13.7c10.6-3.7,21.4-7.1,32.3-9.9"/>
                     </svg>
+                </div>
+                <div className="social">
+                    <CircleButton tooltip="GitHub" tooltipPlacement="top"
+                        link="https://github.com/9inpachi" target="_blank">
+                        <SvgIcon component={GitHubIcon} stroke="currentColor" strokeWidth={2} style={{ fill: 'none' }} />
+                    </CircleButton>
+                    <CircleButton tooltip="Facebook" tooltipPlacement="top"
+                        link="https://facebook.com/9inpachi" target="_blank">
+                        <SvgIcon component={FacebookIcon} />
+                    </CircleButton>
+                    <CircleButton tooltip="LinkedIn" tooltipPlacement="top"
+                        link="https://www.linkedin.com/in/fawadaliq/" target="_blank">
+                        <SvgIcon component={LinkedInIcon} />
+                    </CircleButton>
                 </div>
             </div>
         );

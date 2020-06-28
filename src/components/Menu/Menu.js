@@ -1,9 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import MenuToggle from './MenuToggle/MenuToggle';
 import MenuItem from './MenuItem/MenuItem';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerIcon from '@material-ui/icons/Computer';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import './Menu.scss';
 
 class Menu extends React.Component {
@@ -12,6 +14,16 @@ class Menu extends React.Component {
 
     menuItems = [
         {
+            icon: <ArrowUpwardIcon classes={{ root: 'menu-item-icon' }} />,
+            tooltip: 'Go to top',
+            action: () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        },
+        {
             icon: <NightsStayIcon classes={{ root: 'menu-item-icon' }} />,
             tooltip: 'Toggle dark theme',
             action: () => {
@@ -19,22 +31,22 @@ class Menu extends React.Component {
                 if (document.body.classList.contains('dark-mode')) {
                     localStorage.setItem('theme', 'dark');
                 } else {
-                    localStorage.setItem('theme', 'light')
+                    localStorage.setItem('theme', 'light');
                 }
-            }
-        },
-        {
-            icon: <GitHubIcon classes={{ root: 'menu-item-icon' }} />,
-            tooltip: 'My GitHub',
-            action: () => {
-                window.open('https://github.com/9inpachi')
             }
         },
         {
             icon: <ComputerIcon classes={{ root: 'menu-item-icon' }} />,
             tooltip: 'Projects',
             action: () => {
-                window.open('https://github.com/9inpachi')
+                this.scrollToSection('projects');
+            }
+        },
+        {
+            icon: <HelpOutlineIcon classes={{ root: 'menu-item-icon' }} />,
+            tooltip: 'About',
+            action: () => {
+                this.scrollToSection('about');
             }
         }
     ]
@@ -53,6 +65,15 @@ class Menu extends React.Component {
 
     toggleMenu = () => {
         this.setState({ menuActive: !this.state.menuActive });
+    }
+
+    scrollToSection = (sectionName) => {
+        const element = ReactDOM.findDOMNode(this.props.sectionRefs[sectionName].current);
+        window.scrollTo({
+            top: element.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     render() {

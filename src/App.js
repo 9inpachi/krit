@@ -18,15 +18,20 @@ class App extends React.Component {
             localStorage.setItem('theme', 'dark');
             document.body.classList.add('dark-mode');
         }
+
+        this.sectionRefs = {
+            'projects': React.createRef(),
+            'about': React.createRef()
+        };
     }
 
     render() {
         return (
             <div>
-                <Menu />
+                <Menu sectionRefs={this.sectionRefs} />
                 <TopSection />
-                <ProjectsSection />
-                <AboutSection />
+                <ProjectsSection ref={this.sectionRefs['projects']} />
+                <AboutSection ref={this.sectionRefs['about']} />
                 <Footer />
             </div>
         );
