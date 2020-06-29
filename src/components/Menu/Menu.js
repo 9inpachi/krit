@@ -5,8 +5,9 @@ import MenuItem from './MenuItem/MenuItem';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 import ComputerIcon from '@material-ui/icons/Computer';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import './Menu.scss';
+
+import { CustomSectionsConfig } from '../../CONFIG';
 
 class Menu extends React.Component {
 
@@ -14,8 +15,8 @@ class Menu extends React.Component {
 
     menuItems = [
         {
-            icon: <ArrowUpwardIcon classes={{ root: 'menu-item-icon' }} />,
-            tooltip: 'Go to top',
+            icon: <ArrowUpwardIcon />,
+            tooltip: 'go to top',
             action: () => {
                 window.scrollTo({
                     top: 0,
@@ -24,8 +25,8 @@ class Menu extends React.Component {
             }
         },
         {
-            icon: <NightsStayIcon classes={{ root: 'menu-item-icon' }} />,
-            tooltip: 'Toggle dark theme',
+            icon: <NightsStayIcon />,
+            tooltip: 'toggle dark theme',
             action: () => {
                 document.body.classList.toggle('dark-mode');
                 if (document.body.classList.contains('dark-mode')) {
@@ -36,17 +37,10 @@ class Menu extends React.Component {
             }
         },
         {
-            icon: <ComputerIcon classes={{ root: 'menu-item-icon' }} />,
-            tooltip: 'Projects',
+            icon: <ComputerIcon />,
+            tooltip: 'projects',
             action: () => {
                 this.scrollToSection('projects');
-            }
-        },
-        {
-            icon: <HelpOutlineIcon classes={{ root: 'menu-item-icon' }} />,
-            tooltip: 'About',
-            action: () => {
-                this.scrollToSection('about');
             }
         }
     ]
@@ -56,9 +50,29 @@ class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = { menuActive: false };
+
+        // Sections in menu
+        const sectionsInMenu = CustomSectionsConfig.map((section) => {
+            if (!section.notInMenu) {
+                return {
+                    icon: section.headerIcon,
+                    tooltip: section.name,
+                    action: () => {
+                        this.scrollToSection(section.name);
+                    }
+                }
+            } else {
+                return false;
+            }
+        }).filter(section => section);
+
+        this.menuItems = this.menuItems.concat(sectionsInMenu);
+
         // More of a workaround
         this.menuItems = this.menuItems.map((menuItem) => {
             menuItem.key = 'menu-item-' + Math.round(Math.random() * 10000);
+            // Resizing icons
+            menuItem.icon = React.cloneElement(menuItem.icon, { classes: { root: 'menu-item-icon' } });
             return menuItem;
         });
     }
@@ -94,9 +108,7 @@ class Menu extends React.Component {
                     }
                     angle += index * increment;
                     return (
-                        <MenuItem key={menuItem.key} icon={menuItem.icon}
-                            tooltip={menuItem.tooltip} tooltipPlacement="right"
-                            action={menuItem.action}
+                        <MenuItem {...menuItem} tooltipPlacement="right"
                             menuActive={this.state.menuActive}
                             rotationAngle={angle} />
                     );

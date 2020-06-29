@@ -21,7 +21,7 @@ $ cd krit
 $ npm i
 
 # Run a development version of the project
-$ npm start
+$ npm run start
 ```
 
 ## Configuration
@@ -33,7 +33,7 @@ Not set up yet.
 While you are in the root directory of the project, run the follow command.
 
 ```sh
-$ npm build
+$ npm run build
 ```
 
 This will put the built application in the `./build` directory.

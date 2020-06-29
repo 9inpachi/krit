@@ -2,8 +2,10 @@ import React from 'react';
 import Menu from './components/Menu/Menu';
 import TopSection from './sections/TopSection/TopSection';
 import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
-import AboutSection from './sections/AboutSection/AboutSection';
+import CustomSections from './sections/CustomSections/CustomSections';
 import Footer from './sections/Footer/Footer';
+
+import { CustomSectionsConfig } from './CONFIG';
 
 class App extends React.Component {
 
@@ -20,9 +22,13 @@ class App extends React.Component {
         }
 
         this.sectionRefs = {
-            'projects': React.createRef(),
-            'about': React.createRef()
+            'projects': React.createRef()
         };
+
+        // Creating refs for sections for smooth scrolling
+        CustomSectionsConfig.forEach((customSection) => {
+            this.sectionRefs[customSection.name] = React.createRef();
+        });
     }
 
     render() {
@@ -31,7 +37,7 @@ class App extends React.Component {
                 <Menu sectionRefs={this.sectionRefs} />
                 <TopSection />
                 <ProjectsSection ref={this.sectionRefs['projects']} />
-                <AboutSection ref={this.sectionRefs['about']} />
+                <CustomSections sectionRefs={this.sectionRefs} />
                 <Footer />
             </div>
         );
