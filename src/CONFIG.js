@@ -29,6 +29,7 @@ import WbIridescentIcon from '@material-ui/icons/WbIridescent';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ComputerIcon from '@material-ui/icons/Computer';
 import InfoIcon from '@material-ui/icons/Info';
+import RateReviewIcon from '@material-ui/icons/RateReview';
 
 // CONFIGURABLE TEXT BEGINS HERE
 
@@ -181,7 +182,7 @@ const CustomSectionsConfig = [
             <div>
                 <h4>{Icons['helpoutline']} who am i?</h4>
                 <p>
-                    An easily excited and a highly passionate full stack developer trying to support the world of open source with his little efforts. :)
+                    An easily excited and a highly passionate full stack developer trying to support the world of open source with his little efforts. Full of eagerness to learn and work on new technologies. :)
                 </p>
 
                 <h4>{Icons['code']} programming</h4>
@@ -201,6 +202,21 @@ const CustomSectionsConfig = [
                     {Icons['react']}
                     {Icons['angular']}
                 </p>
+            </div>
+        )
+    },
+    // TEST SECTION
+    {
+        name: 'reviews',
+        headerIcon: <RateReviewIcon />,
+        content: (
+            <div>
+                <h4><b>Andi</b></h4>
+                <p>This guy works fast!</p>
+                <h4><b>Jone</b></h4>
+                <p>This person is very reliable. I had him do this and he did the perfect job.</p>
+                <h4><b>Vincent</b></h4>
+                <p>One of my best colleagues! Easy to work and share ideas with. Always flexible to listen and improvise on things.</p>
             </div>
         )
     }
