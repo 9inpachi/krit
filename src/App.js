@@ -5,7 +5,7 @@ import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
 import CustomSections from './sections/CustomSections/CustomSections';
 import Footer from './sections/Footer/Footer';
 
-import { CustomSectionsConfig } from './CONFIG';
+import { CustomSectionsConfig, CommonConfig } from './CONFIG';
 
 class App extends React.Component {
 
@@ -29,6 +29,9 @@ class App extends React.Component {
         CustomSectionsConfig.forEach((customSection) => {
             this.sectionRefs[customSection.name] = React.createRef();
         });
+
+        // Setting document title
+        document.title = CommonConfig.name + ' - ' + CommonConfig.tagline;
     }
 
     render() {

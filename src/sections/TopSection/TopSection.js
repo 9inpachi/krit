@@ -2,7 +2,7 @@ import React from 'react';
 import CircleButton from '../../components/CircleButton/CircleButton';
 import './TopSection.scss';
 
-import { CommonConfig, DefaultIcons } from '../../CONFIG';
+import { CommonConfig, Icons } from '../../CONFIG';
 
 class TopSection extends React.Component {
     render() {
@@ -25,7 +25,7 @@ class TopSection extends React.Component {
                                 link={socialDetails.link} target="_blank">
                                 {/* If the social platform icon is given then use that else pick from default icons */}
                                 {socialDetails.icon
-                                    ? socialDetails.icon : DefaultIcons[socialDetails.name.toLowerCase()]}
+                                    ? socialDetails.icon : Icons[socialDetails.name.toLowerCase()]}
 
                             </CircleButton>
                         );

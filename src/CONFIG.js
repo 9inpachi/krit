@@ -1,50 +1,34 @@
+/**
+ * This is the config file where you can edit information as you want.
+ * 
+ * There are 3 variable objects which contain all the information.
+ * 
+ * 1. CommonConfig
+ *      This variable contains all the common configuration of your profile
+ *      including your name, your social links and the path to draw the signature.
+ * 2. ProjectsConfig
+ *      This variable contains all the information which will be part of the
+ *      projects section. Here you can add your own projects and provide a link for them
+ *      and also change the icon as per your liking.
+ * 3. CustomSectionsConfig
+ *      Now this is the fun part. This variable is an array which can hold any number
+ *      of sections. Here you can define any of your custom sections may it be "Work", "Reviews",
+ *      "Portfolio" or whatnot. The "content" property supports JSX so you can style or use it
+ *      however you like!
+ * 
+ * So what are you waiting for? GO FOR IT!
+ */
+
 import React from 'react';
 
-// ICONS
-import SvgIcon from '@material-ui/core/SvgIcon';
-import ComputerIcon from '@material-ui/icons/Computer';
-import InfoIcon from '@material-ui/icons/Info';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import MapIcon from '@material-ui/icons/Map';
-import CodeIcon from '@material-ui/icons/Code';
-import LinkIcon from '@material-ui/icons/Link';
+import { Icons } from './CONFIG.icons';
+
+// CUSTOM ICONS
 import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
 import WbIridescentIcon from '@material-ui/icons/WbIridescent';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
-import WebIcon from '@material-ui/icons/Web';
-import { ReactComponent as FacebookIcon } from './assets/icons//facebook.svg';
-import { ReactComponent as GitHubIcon } from './assets/icons//github.svg';
-import { ReactComponent as LinkedInIcon } from './assets/icons//linkedin.svg';
-import { ReactComponent as CppIcon } from './assets/icons//cplusplus-plain.svg';
-import { ReactComponent as JavaIcon } from './assets/icons//java-plain-wordmark.svg';
-import { ReactComponent as AngularIcon } from './assets/icons//angularjs-plain-wordmark.svg';
-import { ReactComponent as JavaScriptIcon } from './assets/icons//javascript-plain.svg';
-import { ReactComponent as MongoDBIcon } from './assets/icons//mongodb-plain-wordmark.svg';
-import { ReactComponent as MySQLIcon } from './assets/icons//mysql-plain-wordmark.svg';
-import { ReactComponent as NodejsIcon } from './assets/icons//nodejs-plain-wordmark.svg';
-import { ReactComponent as PHPIcon } from './assets/icons//php-plain.svg';
-import { ReactComponent as ReactIcon } from './assets/icons//react-original-wordmark.svg';
-import { ReactComponent as TypeScriptIcon } from './assets/icons//typescript-plain.svg';
-// ICONS END
-
-/** Default icons */
-const DefaultIcons = {
-    facebook: <SvgIcon component={FacebookIcon} />,
-    github: <SvgIcon component={GitHubIcon} stroke="currentColor" strokeWidth={2} style={{ fill: 'none' }} />,
-    linkedin: <SvgIcon component={LinkedInIcon} />,
-    projects: <ComputerIcon />,
-    about: <InfoIcon />,
-    cpp: <SvgIcon component={CppIcon} viewBox="0 0 128 128" fontSize="large" />,
-    java: <SvgIcon component={JavaIcon} viewBox="0 0 128 128" fontSize="large" />,
-    typescript: <SvgIcon component={TypeScriptIcon} viewBox="0 0 128 128" fontSize="large" />,
-    javascript: <SvgIcon component={JavaScriptIcon} viewBox="0 0 128 128" fontSize="large" />,
-    mysql: <SvgIcon component={MySQLIcon} viewBox="0 0 128 128" fontSize="large" />,
-    php: <SvgIcon component={PHPIcon} viewBox="0 0 128 128" fontSize="large" />,
-    mongodb: <SvgIcon component={MongoDBIcon} viewBox="0 0 128 128" fontSize="large" />,
-    nodejs: <SvgIcon component={NodejsIcon} viewBox="0 0 128 128" fontSize="large" />,
-    react: <SvgIcon component={ReactIcon} viewBox="0 0 128 128" fontSize="large" />,
-    angular: <SvgIcon component={AngularIcon} viewBox="0 0 128 128" fontSize="large" />
-};
+import ComputerIcon from '@material-ui/icons/Computer';
+import InfoIcon from '@material-ui/icons/Info';
 
 // CONFIGURABLE TEXT BEGINS HERE
 
@@ -71,24 +55,29 @@ const CommonConfig = {
     c-1.3,2.4-2,5-2.7,7.6c-0.7,2.9-1.1,5.9-1.5,8.9c-0.2,1.5-0.4,3.1-0.1,4.6c0.1,0.4,0.2,0.9,0.5,1.2c0.3,0.2,0.7,0.3,1.1,0.3
     c1.4,0.1,2.8-0.1,4.2-0.3c-5.2,1.9-10.4,3.7-15.5,5.7c-8.3,3.1-16.6,6.3-24.6,9.9c-4.3,1.9-8.4,4.1-12.5,6.3
     c12.1-4.7,24.1-9.4,36.3-13.7c10.6-3.7,21.4-7.1,32.3-9.9`,
+    email: 'm.fawaadali98@gmail.com',
     // Information for social media accounts
     social: [
         {
             // Name of the social media platform
-            name: 'Facebook',
+            name: 'GitHub',
             // Link to your account
-            link: 'https://facebook.com/9inpachi',
+            link: 'https://github.com/9inpachi',
             // (Optional) Icon of the social media platform
             // default icon will be used in case of no value
-            icon: <SvgIcon component={FacebookIcon} />
-        },
-        {
-            name: 'GitHub',
-            link: 'https://github.com/9inpachi'
+            icon: Icons['github']
         },
         {
             name: 'LinkedIn',
             link: 'https://linkedin.com/in/fawadaliq'
+        },
+        {
+            name: 'Facebook',
+            link: 'https://facebook.com/9inpachi'
+        },
+        {
+            name: 'Email',
+            link: 'mailto:m.fawaadali98@gmail.com'
         }
     ]
 };
@@ -109,7 +98,7 @@ const ProjectsConfig = {
             // Name of the project
             name: 'Interactive maps application',
             // Icon of the project
-            icon: <MapIcon />,
+            icon: Icons['map'],
             // Description of the project
             description: 'Interactive Maps Application in XWiki. Easy creation of interactive maps, ability to sharing locations and associating structured data with areas.',
             // Links to the project
@@ -120,12 +109,12 @@ const ProjectsConfig = {
                     // Link URL
                     link: 'https://github.com/xwiki-contrib/application-interactive-maps',
                     // Icon of the button
-                    icon: <CodeIcon />
+                    icon: Icons['code']
                 },
                 {
                     tooltip: 'See app',
                     link: 'https://extensions.xwiki.org/xwiki/bin/view/Extension/InteractiveMapsApplication/',
-                    icon: <LinkIcon />
+                    icon: Icons['link']
                 }
             ]
         },
@@ -137,7 +126,7 @@ const ProjectsConfig = {
                 {
                     tooltip: 'See source',
                     link: 'https://github.com/9inpachi/genn',
-                    icon: <CodeIcon />
+                    icon: Icons['code']
                 }
             ]
         },
@@ -149,12 +138,12 @@ const ProjectsConfig = {
                 {
                     tooltip: 'See source',
                     link: 'https://github.com/hsf/phoenix',
-                    icon: <CodeIcon />
+                    icon: Icons['code']
                 },
                 {
                     tooltip: 'See app',
                     link: 'https://hepsoftwarefoundation.org/phoenix/',
-                    icon: <LinkIcon />
+                    icon: Icons['link']
                 }
             ]
         },
@@ -166,7 +155,7 @@ const ProjectsConfig = {
                 {
                     tooltip: 'See app',
                     link: 'https://oipeywdb.com/',
-                    icon: <LinkIcon />
+                    icon: Icons['link']
                 }
             ]
         }
@@ -190,44 +179,31 @@ const CustomSectionsConfig = [
         // Content inside the section
         content: (
             <div>
-                <h4><HelpOutlineIcon /> who am i?</h4>
+                <h4>{Icons['helpoutline']} who am i?</h4>
                 <p>
                     An easily excited and a highly passionate full stack developer trying to support the world of open source with his little efforts. :)
                 </p>
 
-                <h4><CodeIcon /> programming</h4>
+                <h4>{Icons['code']} programming</h4>
                 <p className="programming-icons">
-                    {DefaultIcons['java']}
-                    {DefaultIcons['cpp']}
-                    {DefaultIcons['typescript']}
-                    {DefaultIcons['javascript']}
+                    {Icons['java']}
+                    {Icons['cpp']}
+                    {Icons['typescript']}
+                    {Icons['javascript']}
                 </p>
 
-                <h4><WebIcon /> web</h4>
+                <h4>{Icons['web']} web</h4>
                 <p className="programming-icons">
-                    {DefaultIcons['mysql']}
-                    {DefaultIcons['php']}
-                    {DefaultIcons['mongodb']}
-                    {DefaultIcons['nodejs']}
-                    {DefaultIcons['react']}
-                    {DefaultIcons['angular']}
-                </p>
-            </div>
-        )
-    },
-    // TEST SECTION
-    {
-        name: 'what i like?',
-        headerIcon: <HelpOutlineIcon />,
-        content: (
-            <div>
-                <h4 style={{ fontSize: '2em' }}><HelpOutlineIcon /> what i like?</h4>
-                <p>
-                    I love to watch good anime!
+                    {Icons['mysql']}
+                    {Icons['php']}
+                    {Icons['mongodb']}
+                    {Icons['nodejs']}
+                    {Icons['react']}
+                    {Icons['angular']}
                 </p>
             </div>
         )
     }
 ];
 
-export { CommonConfig, ProjectsConfig, CustomSectionsConfig, DefaultIcons };
+export { CommonConfig, ProjectsConfig, CustomSectionsConfig, Icons };
