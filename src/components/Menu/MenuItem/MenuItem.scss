@@ -13,16 +13,6 @@
     }
 }
 
-.dark-mode {
-  .menu-item {
-    background-color: var(--bg-primary);
-  }
-    
-  .menu-item:hover {
-    background-color: var(--text-primary);
-  }
-}
-
 .menu-active {
     .menu-item {
         visibility: visible;
