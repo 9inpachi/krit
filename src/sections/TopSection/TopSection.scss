@@ -10,14 +10,14 @@
         width: 40%;
         padding-right: 4em;
         border-right: 1px solid var(--text-primary);
-    
+
         h1 {
             font-size: 10rem;
             font-weight: bold;
             line-height: 0.8em;
             margin: 0;
         }
-    
+
         p {
             font-size: 2em;
             margin: 0;
@@ -34,10 +34,7 @@
             height: 100%;
             width: 100%;
 
-            .signature-path {
-                // Got this value by logging path.getTotalLength()
-                stroke-dasharray: 640;
-                stroke-dashoffset: 640;
+            #signature-path {
                 animation: drawSignature 5s linear forwards;
             }
         }
@@ -52,7 +49,7 @@
 
 @media screen and (max-width: 1300px) {
     .top-section {
-        
+
         .intro {
             width: 50%;
 
@@ -76,7 +73,7 @@
             padding-bottom: 2em;
 
             h1 {
-               font-size: 5rem;
+                font-size: 5rem;
             }
         }
 

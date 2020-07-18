@@ -4,7 +4,7 @@ import './MenuItem.scss';
 
 class MenuItem extends React.Component {
 
-    activeTransformStyle = 'translate(0, -50%) rotate(&angle1;deg) translate(8em) rotate(&angle2;deg)';
+    activeTransformStyle = 'translateY(-50%) rotate(&angle1;deg) translate(8em) rotate(&angle2;deg)';
 
     render() {
         return (

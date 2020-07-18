@@ -5,6 +5,18 @@ import './TopSection.scss';
 import { CommonConfig, Icons } from '../../CONFIG';
 
 class TopSection extends React.Component {
+
+    componentDidMount() {
+        if (this.pathElement) {
+            const signatureLength = this.pathElement.getTotalLength();
+            this.pathElement.setAttribute('stroke-dasharray', signatureLength);
+            this.pathElement.setAttribute('stroke-dashoffset', signatureLength);
+            
+            const viewBoxCoords = CommonConfig.signature?.viewBox.split(' ').map(val => parseInt(val));
+            this.pathElement.setAttribute('stroke-width', Math.max(...viewBoxCoords) / 100);
+        }
+    }
+
     render() {
         return (
             <div className="top-section">
@@ -13,9 +25,11 @@ class TopSection extends React.Component {
                     <p>{CommonConfig.tagline}</p>
                 </div>
                 <div className="signature">
-                    <svg viewBox="0 0 100 100">
-                        <path className="signature-path" stroke="var(--text-primary)" fill="none" strokeWidth="1"
-                            d={CommonConfig.signaturePathD} />
+                    <svg viewBox={CommonConfig.signature?.viewBox}>
+                        <path ref={pathElement => {
+                            this.pathElement = pathElement;
+                        }} id="signature-path" stroke="var(--text-primary)" fill="none"
+                            d={CommonConfig.signature?.signaturePathD} />
                     </svg>
                 </div>
                 <div className="social">

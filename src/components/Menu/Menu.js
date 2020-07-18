@@ -100,11 +100,11 @@ class Menu extends React.Component {
                     ME<br />NU
                 </MenuToggle>
                 {this.menuItems.map((menuItem, index) => {
-                    let angle = -80;
+                    let angle = -90;
                     let increment = 0;
                     if (this.menuItems.length > 1) {
                         // We want to cover 160deg on the right side so using that
-                        increment = Math.round(160 / (this.menuItems.length - 1));
+                        increment = Math.round(180 / (this.menuItems.length - 1));
                     }
                     angle += index * increment;
                     return (
