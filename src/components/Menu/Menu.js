@@ -26,7 +26,7 @@ class Menu extends React.Component {
         },
         {
             icon: <NightsStayIcon />,
-            tooltip: 'toggle dark theme',
+            tooltip: 'toggle dark/light theme',
             action: () => {
                 document.body.classList.toggle('dark-mode');
                 if (document.body.classList.contains('dark-mode')) {
