@@ -6,7 +6,7 @@ class MenuToggle extends React.Component {
     render() {
         return (
             <CircleButton onClick={this.props.toggleMenu}
-                size={4}
+                size={3}
                 className="menu-toggle">
                 <span className="menu-text">{this.props.children}</span>
                 <div className="menu-burger">

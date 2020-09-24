@@ -7,13 +7,10 @@
     visibility: hidden;
     opacity: 0;
     z-index: 100;
-
-    .menu-item-icon {
-        font-size: 1.8em;
-    }
 }
 
 .menu-active {
+    
     .menu-item {
         visibility: visible;
         opacity: 1;

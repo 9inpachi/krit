@@ -7,7 +7,7 @@
     z-index: 200;
 
     .menu-text {
-        font-size: 1.2em;
+        font-size: 0.9em;
         font-weight: bold;
         line-height: 0.8em;
     }
@@ -17,7 +17,7 @@
 
         .menu-burger-bar {
             display: block;
-            width: 1.7em;
+            width: 1.2em;
             height: 0.2rem;
             background: var(--text-primary);
             margin-bottom: 0.3em;
@@ -43,8 +43,8 @@
     .menu-toggle {
 
         .menu-burger-bar:nth-child(1) {
-            transform: rotateZ(-45deg) translateY(0.05em);
-            width: 1.5em;
+            transform: rotateZ(-45deg) translateY(0.15em);
+            width: 1.2em;
         }
 
         .menu-burger-bar:nth-child(2) {
@@ -52,8 +52,8 @@
         }
 
         .menu-burger-bar:nth-child(3) {
-            transform: rotateZ(45deg) translateY(-0.05em);
-            width: 1.5em;
+            transform: rotateZ(45deg) translateY(-0.15em);
+            width: 1.2em;
         }
     }
 }
