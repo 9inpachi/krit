@@ -40,7 +40,6 @@ class TopSection extends React.Component {
                                 {/* If the social platform icon is given then use that else pick from default icons */}
                                 {socialDetails.icon
                                     ? socialDetails.icon : Icons[socialDetails.name.toLowerCase()]}
-
                             </CircleButton>
                         );
                     })}
