@@ -1,7 +1,8 @@
 {
-  "name": "fawadali.com",
+  "name": "krit",
   "version": "0.1.0",
-  "description": "Personal website",
+  "description": "A configurable personal website template for minimalists.",
+  "homepage": "./",
   "keywords": [
     "website",
     "personal",
