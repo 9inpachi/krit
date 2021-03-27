@@ -6,7 +6,7 @@ import './CustomSections.scss';
 class CustomSections extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 {CustomSectionsConfig.map((section, index) => (
                     <Section
                         key={'section-' + index}
@@ -18,7 +18,7 @@ class CustomSections extends React.Component {
                         {section.content}
                     </Section>
                 ))}
-            </div>
+            </>
         );
     }
 }
