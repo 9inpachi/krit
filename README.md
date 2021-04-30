@@ -45,10 +45,10 @@ Inside the file, there are 3 variable objects which contain all the information.
 
 ## Deploying / building
 
-While you are in the root directory of the project, run the follow command.
+While you are in the root directory of the project, run the following command.
 
 ```sh
 $ npm run build
 ```
 
-This will put the built application in the `./build` directory.
+This will put the built application in the `./build` directory which can be copied to a server.
