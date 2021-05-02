@@ -11,7 +11,7 @@ class ProjectsSection extends React.Component {
             <Section sectionHeader={ProjectsConfig.name} headerIcon={ProjectsConfig.headerIcon}>
                 {ProjectsConfig.projects.map((project, index) => {
                     return (
-                        <div key={'project-' + index}>
+                        <div className="project" key={'project-' + index}>
                             <h3 className="project-title">{project.icon} {project.name}</h3>
                             <p>{project.description}</p>
                             <div className="project-links">

@@ -4,16 +4,12 @@
     border-radius: 50%;
     cursor: pointer;
     display: inline-flex;
-    margin-right: 1em;
+    margin: 0.5rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 0.5em;
     transition: all 0.5s;
-
-    &:last-child {
-        margin-right: 0;
-    }
 
     &:hover {
         color: var(--bg-primary);
