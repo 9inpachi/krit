@@ -4,6 +4,7 @@ import TopSection from './sections/TopSection/TopSection';
 import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
 import CustomSections from './sections/CustomSections/CustomSections';
 import Footer from './sections/Footer/Footer';
+import FreePalestine from './components/FreePalestine/FreePalestine';
 
 import { CustomSectionsConfig, CommonConfig } from './CONFIG';
 
@@ -36,13 +37,14 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
+                <FreePalestine />
                 <Menu sectionRefs={this.sectionRefs} />
                 <TopSection />
                 <ProjectsSection ref={this.sectionRefs['projects']} />
                 <CustomSections sectionRefs={this.sectionRefs} />
                 <Footer />
-            </div>
+            </>
         );
     }
 }

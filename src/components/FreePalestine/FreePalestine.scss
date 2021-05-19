@@ -1,0 +1,77 @@
+.free-palestine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  z-index: 999;
+
+  &.is-hiding {
+    opacity: 0;
+    transition: 1s;
+
+    .free-palestine-content {
+      transform: translateY(-10em);
+      transition: 1s;
+    }
+
+    .to-website {
+      transform: translateX(5em);
+      transition: 1s;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &-content {
+    margin-right: 10em;
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 5vw;
+      line-height: 0.8em;
+      animation: freePalestine 20s infinite ease-in-out;
+
+      span {
+        font-size: 2.2em;
+        line-height: 0.8em;
+      }
+    }
+  }
+
+  .to-website svg {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .free-palestine {
+    flex-direction: column;
+
+    &-content {
+      margin: 0;
+      margin-bottom: 3em;
+
+      h1 {
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+@keyframes freePalestine {
+  0%,
+  100% {
+    transform: translateY(0.2em);
+  }
+  50% {
+    transform: translateY(-0.2em);
+  }
+}
