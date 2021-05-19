@@ -10,8 +10,8 @@ import CodeIcon from '@material-ui/icons/Code';
 import LinkIcon from '@material-ui/icons/Link';
 import WebIcon from '@material-ui/icons/Web';
 import MailIcon from '@material-ui/icons/Mail';
+import Twitter from '@material-ui/icons/Twitter';
 import { ReactComponent as FacebookIcon } from './assets/icons/facebook.svg';
-import { ReactComponent as TwitterIcon } from './assets/icons/twitter.svg';
 import { ReactComponent as GitHubIcon } from './assets/icons/github.svg';
 import { ReactComponent as LinkedInIcon } from './assets/icons/linkedin.svg';
 import { ReactComponent as CppIcon } from './assets/icons/cplusplus-plain.svg';
@@ -31,7 +31,7 @@ import { ReactComponent as GraphQLIcon } from './assets/icons/graphql.svg';
 const Icons = {
     email: <MailIcon />,
     facebook: <SvgIcon component={FacebookIcon} />,
-    twitter: <SvgIcon component={TwitterIcon} viewBox="0 0 128 128" fontSize="small" />,
+    twitter: <Twitter />,
     github: <SvgIcon component={GitHubIcon} stroke="currentColor" strokeWidth={2} style={{ fill: 'none' }} />,
     linkedin: <SvgIcon component={LinkedInIcon} />,
     projects: <ComputerIcon />,
