@@ -30,11 +30,14 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ComputerIcon from '@material-ui/icons/Computer';
 import InfoIcon from '@material-ui/icons/Info';
 import RateReviewIcon from '@material-ui/icons/RateReview';
+import Description from '@material-ui/icons/Description';
 
 // CONFIGURABLE TEXT BEGINS HERE
 
 /** Common config for top section and footer */
 const CommonConfig = {
+    // Whether to add the free Palestine screen at the start
+    addFreePalestine: true,
     // Name that will be displayed at the top
     name: 'fawad ali',
     // Tagline that will be displayed after the name
@@ -83,8 +86,17 @@ const CommonConfig = {
             link: 'https://facebook.com/9inpachi'
         },
         {
+            name: 'Twitter',
+            link: 'https://twitter.com/9inpachi'
+        },
+        {
             name: 'Email',
             link: 'mailto:m.fawaadali98@gmail.com'
+        },
+        {
+            name: 'CV',
+            link: 'https://docs.google.com/document/d/15uVQAhsvKsreOd9Xvh9f-HGMkqpI_7dMuSKmQQvFdCo/view?usp=sharing',
+            icon: <Description />
         }
     ]
 };
@@ -103,11 +115,11 @@ const ProjectsConfig = {
     projects: [
         {
             // Name of the project
-            name: 'Interactive maps application',
+            name: 'Interactive Maps Application',
             // Icon of the project
             icon: Icons['map'],
             // Description of the project
-            description: 'Interactive Maps Application in XWiki. Easy creation of interactive maps, ability to sharing locations and associating structured data with areas.',
+            description: 'An application extension in XWiki to easily create interactive maps with ability to share locations and associate structured data with areas.',
             // Links to the project
             links: [
                 {
@@ -126,9 +138,9 @@ const ProjectsConfig = {
             ]
         },
         {
-            name: 'OpenCL code-generation backend for GPU-enhanced neural networks',
+            name: 'OpenCL code-generation backend for GPU-enhanced Neural Networks',
             icon: <SettingsInputAntennaIcon />,
-            description: 'GeNN is a GPU-enhanced Neuronal Network simulation environment based on code generation for Nvidia CUDA. This project added a new OpenCL based backend to GeNN.',
+            description: 'GeNN is a GPU-enhanced Neuronal Network simulation environment based on code generation for NVIDIA CUDA. This project added a new OpenCL based backend to GeNN.',
             links: [
                 {
                     tooltip: 'See source',
@@ -155,9 +167,9 @@ const ProjectsConfig = {
             ]
         },
         {
-            name: 'Empower youth for work - Oxfam GB',
+            name: 'Empower Youth for Work - Oxfam GB',
             icon: <BusinessCenterIcon />,
-            description: 'Beneficiaries information web system to keep track of beneficiaries influenced by the EYW project.',
+            description: 'A web system to manage beneficiaries information and keep track of beneficiaries influenced by the EYW project.',
             links: [
                 {
                     tooltip: 'See app',
@@ -185,8 +197,8 @@ const CustomSectionsConfig = [
         notInMenu: false,
         // Content inside the section
         content: (
-            <div>
-                <h4>{Icons['helpoutline']} who am i?</h4>
+            <>
+                <h4>{Icons['helpoutline']} who is this guy?</h4>
                 <p>
                     An easily excited and a highly passionate full stack developer trying to support the world of open source with his little efforts. Full of eagerness to learn and work on new technologies. :)
                 </p>
@@ -201,6 +213,7 @@ const CustomSectionsConfig = [
 
                 <h4>{Icons['web']} web</h4>
                 <p className="programming-icons">
+                    {Icons['graphql']}
                     {Icons['mysql']}
                     {Icons['php']}
                     {Icons['mongodb']}
@@ -208,22 +221,59 @@ const CustomSectionsConfig = [
                     {Icons['react']}
                     {Icons['angular']}
                 </p>
-            </div>
+            </>
         )
     },
-    // TEST SECTION
     {
         name: 'reviews',
         headerIcon: <RateReviewIcon />,
         content: (
-            <div>
-                <h4><b>Andi</b></h4>
-                <p>This guy works fast!</p>
-                <h4><b>Jone</b></h4>
-                <p>This person is very reliable. I had him do this and he did the perfect job.</p>
-                <h4><b>Vincent</b></h4>
-                <p>One of my best colleagues! Easy to work and share ideas with. Always flexible to listen and improvise on things.</p>
-            </div>
+            <>
+                <h4 style={{ fontSize: '2em' }}>{Icons['helpoutline']} what do others say?</h4>
+                <p>
+                    <span style={{ fontSize: '5rem', height: '30px', display: 'block' }}>“</span>
+                    <br />
+                    Fawad did an excellent job for us on Phoenix. He worked hard, writing very good and legible code and made an invaluable contribution to the project.
+                </p>
+                <p>We like that he is very motivated, self-driven and is already an experienced and knowledgable coder.</p>
+                <p style={{ textAlign: 'right', fontSize: 'small' }}>
+                    <i>
+                        <b>Edward Moyse</b>
+                        <br />
+                        Software Coordinator
+                        <br />
+                        CERN
+                    </i>
+                </p>
+                <p>
+                    <span style={{ fontSize: '5rem', height: '30px', display: 'block' }}>“</span>
+                    <br />
+                    The mentors have noticed that Fawad has strong technical skills, an ability to learn quickly new technologies, that he is very flexible and open minded, ready to discuss his views and to ponder about the pros and cons in a thoughtful and collected manner, making his own decisions taking into account the feedback he gets without accepting everything nor rejecting anything.
+                </p>
+                <p style={{ textAlign: 'right', fontSize: 'small' }}>
+                    <i>
+                        <b>Stéphane Lauriere &amp; Ecaterina Moraru</b>
+                        <br />
+                        XWiki SAS
+                    </i>
+                </p>
+                <p>
+                    <span style={{ fontSize: '5rem', height: '30px', display: 'block' }}>“</span>
+                    <br />
+                    I have really appreciated your confidence to solve problems yourself and follow your own intuition even when it goes against what I was suggesting. I feel you were mostly right :)
+                </p>
+                <p style={{ textAlign: 'right', fontSize: 'small' }}>
+                    <i>
+                        <b>James Knight</b>
+                        <br />
+                        GeNN Team
+                        <br />
+                        Research Fellow
+                        <br />
+                        The University of Sussex
+                    </i>
+                </p>
+            </>
         )
     }
 ];

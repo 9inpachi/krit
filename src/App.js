@@ -38,7 +38,7 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <FreePalestine />
+                {CommonConfig.addFreePalestine && <FreePalestine />}
                 <Menu sectionRefs={this.sectionRefs} />
                 <TopSection />
                 <ProjectsSection ref={this.sectionRefs['projects']} />
