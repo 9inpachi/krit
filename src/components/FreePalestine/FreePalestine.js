@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ChevronRight, Description, PlayArrow } from '@material-ui/icons';
 import CircleButton from '../CircleButton/CircleButton';
-import { Icons } from '../../CONFIG.icons';
+import { Icons } from '../../config/icons';
 import './FreePalestine.scss';
 
 class FreePalestine extends Component {

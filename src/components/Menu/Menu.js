@@ -7,7 +7,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import './Menu.scss';
 
-import { CustomSectionsConfig } from '../../CONFIG';
+import { CustomSectionsConfig } from '../../config';
 
 class Menu extends React.Component {
 

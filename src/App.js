@@ -6,7 +6,7 @@ import CustomSections from './sections/CustomSections/CustomSections';
 import Footer from './sections/Footer/Footer';
 import FreePalestine from './components/FreePalestine/FreePalestine';
 
-import { CustomSectionsConfig, CommonConfig } from './CONFIG';
+import { CustomSectionsConfig, CommonConfig } from './config'
 
 class App extends React.Component {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import CircleButton from '../../components/CircleButton/CircleButton';
 import './Footer.scss';
 
-import { CommonConfig, Icons } from '../../CONFIG';
+import { CommonConfig, Icons } from '../../config';
 
 class Footer extends React.Component {
     render() {

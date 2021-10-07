@@ -21,7 +21,7 @@
 
 import React from 'react';
 
-import { Icons } from './CONFIG.icons';
+import { Icons } from './config.icons';
 
 // CUSTOM ICONS
 import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
@@ -32,7 +32,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import Description from '@material-ui/icons/Description';
 
-// CONFIGURABLE TEXT BEGINS HERE
+// configURABLE TEXT BEGINS HERE
 
 /** Common config for top section and footer */
 const CommonConfig = {

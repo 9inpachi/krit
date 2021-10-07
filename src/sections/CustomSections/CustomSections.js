@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../Section/Section';
-import { CustomSectionsConfig } from '../../CONFIG';
+import { CustomSectionsConfig } from '../../config';
 import './CustomSections.scss';
 
 class CustomSections extends React.Component {

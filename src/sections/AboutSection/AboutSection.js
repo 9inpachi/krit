@@ -1,10 +1,10 @@
 import React from 'react';
-import Section from '../Section/Section';
 import InfoIcon from '@material-ui/icons/Info';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import CodeIcon from '@material-ui/icons/Code';
 import WebIcon from '@material-ui/icons/Web';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import Section from '../Section/Section';
 import { ReactComponent as CppIcon } from '../../assets/icons/cplusplus-plain.svg';
 import { ReactComponent as JavaIcon } from '../../assets/icons/java-plain-wordmark.svg';
 import { ReactComponent as AngularIcon } from '../../assets/icons/angularjs-plain-wordmark.svg';

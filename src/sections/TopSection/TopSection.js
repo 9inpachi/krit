@@ -2,7 +2,7 @@ import React from 'react';
 import CircleButton from '../../components/CircleButton/CircleButton';
 import './TopSection.scss';
 
-import { CommonConfig, Icons } from '../../CONFIG';
+import { CommonConfig, Icons } from '../../config';
 
 class TopSection extends React.Component {
 

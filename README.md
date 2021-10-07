@@ -27,7 +27,7 @@ $ npm run start
 ## Configuration
 
 This is the best part. **krit** is easily configurable so that you can make your own personal website out of it!
-All the configurable options exist inside [src/CONFIG.js](src/CONFIG.js).
+All the configurable options exist inside [src/config/index.js](src/config/index.js).
 
 Inside the file, there are 3 variable objects which contain all the information.
 

@@ -3,7 +3,7 @@ import Section from '../Section/Section';
 import CircleButton from '../../components/CircleButton/CircleButton';
 import './ProjectsSection.scss';
 
-import { ProjectsConfig } from '../../CONFIG';
+import { ProjectsConfig } from '../../config';
 
 class ProjectsSection extends React.Component {
     render() {
