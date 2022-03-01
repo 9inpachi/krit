@@ -21,7 +21,7 @@
 
 import React from 'react';
 
-import { Icons } from './config.icons';
+import { Icons } from './icons';
 
 // CUSTOM ICONS
 import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
