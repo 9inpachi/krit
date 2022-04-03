@@ -25,6 +25,10 @@ body {
     transition: all 0.2s;
 }
 
+input, textarea, button {
+    font-family: inherit;
+}
+
 .body-wrapper {
     width: 1100px;
     max-width: 90%;

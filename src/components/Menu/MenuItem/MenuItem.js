@@ -4,7 +4,7 @@ import './MenuItem.scss';
 
 class MenuItem extends React.Component {
 
-    activeTransformStyle = 'translateY(-50%) rotate(&angle1;deg) translate(6em) rotate(&angle2;deg)';
+    activeTransformStyle = 'translateY(-50%) rotate(&angle1;deg) translate(6rem) rotate(&angle2;deg)';
 
     render() {
         return (
@@ -12,7 +12,7 @@ class MenuItem extends React.Component {
                 tooltip={this.props.tooltip}
                 onClick={this.props.action}
                 tooltipPlacement={this.props.tooltipPlacement}
-                size={2.5}
+                size={3.5}
                 style={!this.props.menuActive ? {} : {
                     transform: this.activeTransformStyle
                         .replace(/&angle1;/g, this.props.rotationAngle)
