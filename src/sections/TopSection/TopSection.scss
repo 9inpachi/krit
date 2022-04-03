@@ -8,18 +8,18 @@
     .intro {
         text-align: right;
         width: 40%;
-        padding-right: 4em;
+        padding-right: 4rem;
         border-right: 1px solid var(--text-primary);
 
         h1 {
             font-size: 9rem;
             font-weight: bold;
-            line-height: 0.8em;
+            line-height: 0.9em;
             margin: 0;
         }
 
         p {
-            font-size: 2em;
+            font-size: 2rem;
             margin: 0;
         }
     }
@@ -28,7 +28,7 @@
         text-align: left;
         width: 60%;
         height: 100%;
-        padding-left: 4em;
+        padding-left: 4rem;
 
         svg {
             height: 100%;
@@ -42,7 +42,7 @@
 
     .social {
         position: absolute;
-        bottom: 3em;
+        bottom: 3rem;
         margin: 0 auto;
         text-align: center;
     }
@@ -71,7 +71,7 @@
             border-right: none;
             width: auto;
             padding: 0;
-            padding-bottom: 2em;
+            padding-bottom: 2rem;
 
             h1 {
                 font-size: 5rem;
@@ -81,7 +81,7 @@
         .signature {
             height: 40%;
             padding: 0;
-            padding-top: 2em;
+            padding-top: 2rem;
         }
     }
 }

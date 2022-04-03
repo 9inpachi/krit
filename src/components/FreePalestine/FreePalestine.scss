@@ -30,24 +30,24 @@
   }
 
   &-content {
-    margin-right: 10em;
+    margin-right: 10rem;
     text-align: center;
 
     h1 {
       text-transform: uppercase;
       font-size: 5vw;
-      line-height: 0.8em;
+      line-height: 0.8rem;
       animation: freePalestine 20s infinite ease-in-out;
 
       span {
-        font-size: 2.2em;
-        line-height: 0.8em;
+        font-size: 2.2rem;
+        line-height: 0.8rem;
       }
     }
   }
 
   .to-website svg {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
@@ -57,7 +57,7 @@
 
     &-content {
       margin: 0;
-      margin-bottom: 3em;
+      margin-bottom: 3rem;
 
       h1 {
         font-size: 10vw;

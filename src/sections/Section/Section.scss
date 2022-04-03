@@ -2,25 +2,25 @@
     width: 100%;
 
     .section {
-        padding: 5em;
+        padding: 5rem;
         display: flex;
 
         .section-header {
             font-size: 3rem;
-            padding-right: 0.7em;
+            padding-right: 2rem;
             border-right: 1px solid var(--text-primary);
             display: flex;
             align-items: flex-start;
 
             .section-header-icon {
-                padding: 0.2em;
-                font-size: 1em;
+                padding: 0.625rem;
+                font-size: 3rem;
                 transition: all 0.5s;
             }
         }
 
         .section-content {
-            padding-left: 2em;
+            padding-left: 2rem;
         }
 
         &.section-reverse {
@@ -29,13 +29,13 @@
             .section-header {
                 border-right: none;
                 padding-right: 0;
-                padding-left: 0.7em;
+                padding-left: 0.7rem;
                 border-left: 1px solid var(--text-primary);
             }
 
             .section-content {
                 padding-left: 0;
-                padding-right: 2em;
+                padding-right: 2rem;
                 text-align: right;
             }
         }
@@ -51,12 +51,12 @@
 
         .section,
         .section.section-reverse {
-            padding: 3em;
+            padding: 3rem;
             flex-direction: column;
 
             .section-header {
                 padding: 0;
-                padding-bottom: 0.7em;
+                padding-bottom: 0.7rem;
                 border: none;
                 border-bottom: 1px solid var(--text-primary);
                 text-align: center;

@@ -1,5 +1,5 @@
 .circle-button {
-    border: 0.2em solid var(--text-primary);
+    border: 0.2rem solid var(--text-primary);
     color: var(--text-primary);
     border-radius: 50%;
     cursor: pointer;
@@ -8,7 +8,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0.5em;
+    padding: 0.5rem;
     transition: all 0.5s;
 
     &:hover {

@@ -4,7 +4,7 @@ import './CircleButton.scss';
 
 class CircleButton extends React.Component {
     render() {
-        const ButtonTag = this.props.link ? 'a' : 'div';
+        const ButtonTag = this.props.link ? 'a' : 'button';
         return (
             <Tooltip title={this.props.tooltip ? this.props.tooltip : ''}
                 placement={this.props.tooltipPlacement}>
@@ -14,7 +14,7 @@ class CircleButton extends React.Component {
                     className={!this.props.className ? 'circle-button' : ('circle-button ' + this.props.className)}
                     style={
                         Object.assign(
-                            { width: this.props.size + 'em', height: this.props.size + 'em' },
+                            { width: this.props.size + 'rem', height: this.props.size + 'rem' },
                             this.props.style
                         )
                     }>

@@ -1,27 +1,27 @@
 .menu-toggle {
     position: fixed;
     top: 50%;
-    left: 2em;
+    left: 2rem;
     background-color: var(--bg-primary);
     transform: translateY(-50%);
     z-index: 200;
 
     .menu-text {
-        font-size: 0.9em;
+        font-size: 0.9rem;
         font-weight: bold;
-        line-height: 0.8em;
+        line-height: 0.8rem;
     }
 
     .menu-burger {
-        padding-left: 0.3em;
+        padding-left: 0.3rem;
 
         .menu-burger-bar {
             display: block;
-            width: 1.2em;
+            width: 1.2rem;
             height: 0.2rem;
             background: var(--text-primary);
-            margin-bottom: 0.3em;
-            border-radius: 1em;
+            margin-bottom: 0.3rem;
+            border-radius: 1rem;
             transition: all 0.5s;
 
             &:last-child {
@@ -44,7 +44,7 @@
 
         .menu-burger-bar:nth-child(1) {
             transform: rotateZ(-45deg) translateY(0.15em);
-            width: 1.2em;
+            width: 1.2rem;
         }
 
         .menu-burger-bar:nth-child(2) {
@@ -53,13 +53,13 @@
 
         .menu-burger-bar:nth-child(3) {
             transform: rotateZ(45deg) translateY(-0.15em);
-            width: 1.2em;
+            width: 1.2rem;
         }
     }
 }
 
 @media screen and (max-width: 768px) {
     .menu-toggle {
-        left: 1em;
+        left: 1rem;
     }
 }
