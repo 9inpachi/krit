@@ -37,7 +37,7 @@ import Description from '@material-ui/icons/Description';
 /** Common config for top section and footer */
 const CommonConfig = {
     // Whether to add the free Palestine screen at the start
-    addFreePalestine: false,
+    addFreePalestine: true,
     // Name that will be displayed at the top
     name: 'fawad ali',
     // Tagline that will be displayed after the name

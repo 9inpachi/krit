@@ -44,7 +44,7 @@ class FreePalestine extends Component {
               this.setState({ isHiding: true });
               setTimeout(() => this.setState({ hidden: true, isHiding: false }), 1000);
             }}
-            size={2}
+            size={4}
             tooltip="Go to website"
           >
             <ChevronRight />
