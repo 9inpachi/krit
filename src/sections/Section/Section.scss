@@ -14,6 +14,7 @@
 
             .section-header-icon {
                 padding: 0.625rem;
+                padding-left: 0;
                 font-size: 3rem;
                 transition: all 0.5s;
             }
@@ -29,7 +30,7 @@
             .section-header {
                 border-right: none;
                 padding-right: 0;
-                padding-left: 0.7rem;
+                padding-left: 2rem;
                 border-left: 1px solid var(--text-primary);
             }
 

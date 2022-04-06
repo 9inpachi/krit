@@ -6,6 +6,8 @@
     --bg-primary: #fafafa;
     --text-primary: #000000;
     --text-secondary: #e0e0e0;
+    
+    font-size: 16px;
 }
 
 // Variables for dark theme
@@ -21,6 +23,7 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
     // Transition for dark mode
     transition: all 0.2s;
 }
