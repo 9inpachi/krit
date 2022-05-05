@@ -95,6 +95,11 @@ class Menu extends React.Component {
     }
 
     render() {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches ? true : false;
+        const startAngle = isMobile ? 0 : -90;
+        const rotationAngle = isMobile ? 90 : 180;
+        console.log(isMobile);
+
         return (
             // The "menu-active" class is also used by MenuToggle and MenuItem(s)
             // We could pass a prop to each component but CSS is good here to avoid overhead
@@ -102,20 +107,22 @@ class Menu extends React.Component {
             <div className={this.state.menuActive ? 'menu menu-active' : 'menu'}>
                 <div className="menu-backdrop" onClick={this.closeMenu}></div>
                 <div className="menu-data">
-                    <MenuToggle toggleMenu={this.toggleMenu}>
+                    <MenuToggle isMobile={isMobile} toggleMenu={this.toggleMenu}>
                         ME<br />NU
                     </MenuToggle>
                     {this.menuItems.map((menuItem, index) => {
-                        let angle = -90;
+                        let angle = startAngle;
                         let increment = 0;
                         if (this.menuItems.length > 1) {
-                            // We want to cover 160deg on the right side so using that
-                            increment = Math.round(180 / (this.menuItems.length - 1));
+                            // We want to cover 180deg on the right side so using that
+                            increment = Math.round(rotationAngle / (this.menuItems.length - 1));
                         }
                         angle += index * increment;
+
                         return (
                             <MenuItem {...menuItem} tooltipPlacement="right"
                                 menuActive={this.state.menuActive}
+                                isMobile={isMobile}
                                 rotationAngle={angle} />
                         );
                     })}

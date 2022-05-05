@@ -16,3 +16,11 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .menu-item {
+        left: 1rem;
+        top: 1rem;
+        transform: translateY(0);
+    }
+}
