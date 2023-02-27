@@ -208,13 +208,9 @@ const CustomSectionsConfig = [
                             <p>{project.description}</p>
                             <div style={{ textAlign: 'right' }}>
                                 {project.links.map((link, linkIndex) => {
-                                    const marginRightStyle = linkIndex === project.links.length - 1
-                                                    ? { marginRight: '0' }
-                                                    : undefined;
-
                                     return (
-                                        <CircleButton style={marginRightStyle} key={'project-link-' + index + linkIndex}
-                                            link={link.link} target="_blank" tooltip={link.tooltip} size={1.4}>
+                                        <CircleButton key={'project-link-' + index + linkIndex} link={link.link} 
+                                            target="_blank" tooltip={link.tooltip} size={1.4}>
                                             {link.icon}
                                         </CircleButton>
                                     );
