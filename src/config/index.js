@@ -32,7 +32,10 @@ import InfoIcon from '@material-ui/icons/Info';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import Description from '@material-ui/icons/Description';
 
-// configURABLE TEXT BEGINS HERE
+// CUSTOM COMPONENTS
+import CircleButton from '../components/CircleButton/CircleButton';
+
+// CONFIGURABLE TEXT BEGINS HERE
 
 /** Common config for top section and footer */
 const CommonConfig = {
@@ -109,7 +112,7 @@ const ProjectsConfig = {
     // See https://material-ui.com/components/material-icons/
     headerIcon: <ComputerIcon />,
     // Extra classes to apply styling
-    // "section-reverse" class makes a section right to left
+    // "section-reverse" class makes a section flow from right to left
     extraClass: '',
     // Projects
     projects: [
@@ -183,19 +186,51 @@ const ProjectsConfig = {
 
 /** Config for sections */
 const CustomSectionsConfig = [
-    // ABOUT SECTION
+    // PROJECTS SECTION
     {
         // Name of the section
-        name: 'about',
+        name: 'projects',
         // Icon next to the header title. The headerIcon can use any SVG icon, material icons are preferred
         // See https://material-ui.com/components/material-icons/
-        headerIcon: <InfoIcon />,
+        headerIcon: <ComputerIcon />,
         // Extra classes to apply styling
         // "section-reverse" class makes a section right to left
-        extraClass: 'about-section section-reverse',
+        extraClass: '',
         // If you don't want a section in menu, make this true
         notInMenu: false,
         // Content inside the section
+        content: (
+            <>
+                {ProjectsConfig.projects.map((project, index) => {
+                    return (
+                        <div key={'project-' + index}>
+                            <h3 style={{ fontSize: '1.4rem' }}>{project.icon} {project.name}</h3>
+                            <p>{project.description}</p>
+                            <div style={{ textAlign: 'right' }}>
+                                {project.links.map((link, linkIndex) => {
+                                    const marginRightStyle = linkIndex === project.links.length - 1
+                                                    ? { marginRight: '0' }
+                                                    : undefined;
+
+                                    return (
+                                        <CircleButton style={marginRightStyle} key={'project-link-' + index + linkIndex}
+                                            link={link.link} target="_blank" tooltip={link.tooltip} size={1.4}>
+                                            {link.icon}
+                                        </CircleButton>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    );
+                })}
+            </>
+        )
+    },
+    // ABOUT SECTION
+    {
+        name: 'about',
+        headerIcon: <InfoIcon />,
+        extraClass: 'about-section section-reverse',
         content: (
             <>
                 <h4>{Icons['helpoutline']} who is this guy?</h4>

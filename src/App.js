@@ -1,7 +1,6 @@
 import React from 'react';
 import Menu from './components/Menu/Menu';
 import TopSection from './sections/TopSection/TopSection';
-import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
 import CustomSections from './sections/CustomSections/CustomSections';
 import Footer from './sections/Footer/Footer';
 import FreePalestine from './components/FreePalestine/FreePalestine';
@@ -22,9 +21,7 @@ class App extends React.Component {
             document.body.classList.add('dark-mode');
         }
 
-        this.sectionRefs = {
-            'projects': React.createRef()
-        };
+        this.sectionRefs = {};
 
         // Creating refs for sections for smooth scrolling
         CustomSectionsConfig.forEach((customSection) => {
@@ -41,7 +38,6 @@ class App extends React.Component {
                 {CommonConfig.addFreePalestine && <FreePalestine />}
                 <Menu sectionRefs={this.sectionRefs} />
                 <TopSection />
-                <ProjectsSection ref={this.sectionRefs['projects']} />
                 <CustomSections sectionRefs={this.sectionRefs} />
                 <Footer />
             </>
